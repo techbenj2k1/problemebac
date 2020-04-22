@@ -1,5 +1,5 @@
-//SII-5
-#include <bits/stdc++.h>
+//SII-5(Testul 6)
+#include <bits/stdc++.h>                   
 
 using namespace std;
 
@@ -20,6 +20,29 @@ int main()
     }
     return 0;
 }
+#include <bits/stdc++.h>
+//SII-5(Testul 10)
+
+using namespace std;
+
+int main()
+{
+    ifstream f("bac.in");
+  int a[5][6];
+    for(int j=4; j>=0; j--){
+            a[3][j]=20-j;
+        for(int i=2; i>=0; i--)
+            a[i][j]=a[i+1][j]-5;
+    }
+    for(int i=0; i<4; i++){
+        for(int j=0; j<5; j++)
+            cout<<a[i][j]<<" ";
+        cout<<"\n";
+
+
+}
+}
+
 //SIII - I
 #include <bits/stdc++.h>
 #include <string>
