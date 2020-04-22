@@ -20,3 +20,99 @@ int main()
     }
     return 0;
 }
+//SIII - I
+#include <bits/stdc++.h>
+#include <string>
+
+using namespace std;
+
+
+int v[10];
+void P_imp(int n, int &p){
+
+    while(n){
+        if(v[n%10]==0 and (n%10)%2==0) {
+            v[n%10]++;
+            p*=n%10;
+        }
+        n/=10;
+    }
+}
+
+int main()
+{
+   int n, p=1;
+   cin>>n;
+   P_imp(n,p);
+   cout<<p;
+    return 0;
+}
+//SIII- 2
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    bool ok=0;
+   char s[105], cuv[105], c[]="succes";
+   cin.getline(s,105);
+   char *p=strtok(s, " ");
+    strcat(cuv,p);
+    strcat(cuv," ");
+    p=strtok(NULL," ");
+    while(p){
+
+        if(p[strlen(p)-1]==cuv[strlen(cuv)-2]) {
+
+                ok=1;
+            strcat(cuv, c);
+            strcat(cuv," ");
+            strcat(cuv,p);
+            strcat(cuv," ");
+        }
+        else{strcat(cuv,p);
+            strcat(cuv," ");
+        }
+        p=strtok(NULL," ");
+    }
+    if(ok)
+        cout<<cuv;
+    else cout<<"NU EXISTA";
+
+
+
+    return 0;
+}
+//SIII-3
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    ifstream f("bac.in");
+  int x, y,l=2, lmax=0, rmax;
+  f>>x>>y;
+  int r=y-x;
+
+  while(f>>x){
+
+    if(x-y==r){
+        l++;
+
+    }
+    else{
+        if(l>lmax) lmax=l, rmax=r;
+        r=x-y;
+        l=0;
+
+    }
+    y=x;
+  }
+        if(l>lmax) lmax=l, rmax=r;
+    cout<<rmax;
+
+    return 0;
+}
+
