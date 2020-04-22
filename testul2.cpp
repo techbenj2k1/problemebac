@@ -19,6 +19,8 @@ int main()
     s+=x;
 
    }
+        if(s<smin)
+            smin=s;
         cout<<smin;
 }
 
