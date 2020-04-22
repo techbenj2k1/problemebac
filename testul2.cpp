@@ -10,13 +10,13 @@ int main()
    s=x;
   int smin=1000;
    while(f>>x){
-       s+=x;
 
     if(s<smin)
     {
         smin=s;
     }
     if(s>0)s=0;
+    s+=x;
 
    }
         cout<<smin;
