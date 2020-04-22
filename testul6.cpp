@@ -27,6 +27,34 @@ int main()
 
     for(int i=1000000; i<=9999999; i++)
         if (verif(i)) g<<i<<"\n";
+ //S3-2
+    #include <bits/stdc++.h>
+
+using namespace std;
+bool check(char s[105]){
+    char v[]="aeiou";
+    int nrv=0, nrc=0;
+    for(int i=0;s[i];i++){
+        if(strchr(v,s[i])) nrv++;
+        else nrc++;
+    }
+    return nrc>nrv;
+}
+
+int main()
+{
+    char s[105];
+    cin.getline(s,105);
+    char *p=strtok(s," ");
+    while(p){
+        if(check(p)) cout<<p<<"\n";
+        p=strtok(NULL," ");
+    }
+
+}
+
+
+    
 
 
 }
