@@ -23,4 +23,45 @@ int main()
       }
 
 }
+//S3-1
+#include <bits/stdc++.h>
+#define MAX_N 100005
+
+using namespace std;
+long long  K, P[MAX_N];
+
+bool viz[MAX_N];
+
+void ciur() {
+
+	for(int i = 2; i < MAX_N; ++i) {
+
+		if(viz[i] == 0) {
+
+			P[++K] = i;
+
+			for(int j = i+i; j < MAX_N; j += i) {
+
+				viz[j] = 1;
+
+			}
+		}
+	}
+}
+int main()
+{
+    ciur();
+ int n,s=0;
+
+    cin>>n;
+    int i=1;
+    for(;i<=K and P[i]<=n; i++){
+        if(n%P[i]) continue;
+        else s+=P[i];
+    }
+    cout<<s;
+
+}
+
+
 
