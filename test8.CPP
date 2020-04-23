@@ -64,4 +64,29 @@ int main()
 }
 
 
+//S3-3
+#include <bits/stdc++.h>
+#define MAX_N 100005
+
+using namespace std;
+
+
+int v[10];
+int main()
+{
+    ifstream f("bac.in");
+    int  nr=0, poz[105],x;
+    int maxim=-1;
+    while(f>>x){
+        v[x%10]++;
+        poz[x%10]=nr;
+            if(v[x%10]>maxim) maxim=v[x%10];
+        nr++;
+    }
+    for(int i=0; i<10; i++)
+        if(v[i]==maxim) cout<<poz[i]+1<<" ";
+
+
+}
+
 
