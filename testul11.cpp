@@ -48,4 +48,30 @@ int main()
  }
     //return 0;
 
+//S3-2
+#include <bits/stdc++.h>
+#define MAX_N 10005
 
+using namespace std;
+
+ //ifstream f("bac.in");
+
+using namespace std;
+
+
+
+int main()
+{
+    char s[101];
+    cin.getline(s,101);
+    char *p=strtok(s, " ");
+    while(p){
+            if('a'<=p[0] and p[0]<='z') p[0]=p[0]-32;
+            for(int i=1;p[i]; i++){
+                if('A'<=p[i] and p[i]<='Z') p[i]=p[i]+32;
+                else continue;
+            }
+        cout<<p<<" ";
+        p=strtok(NULL," ");
+    }
+ }
