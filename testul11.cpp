@@ -75,3 +75,33 @@ int main()
         p=strtok(NULL," ");
     }
  }
+#include <bits/stdc++.h>
+#define MAX_N 10005
+
+using namespace std;
+
+ ifstream f("bac.in");
+
+using namespace std;
+
+
+
+int main()
+{
+    int x, y, nr=1;
+    f>>x;
+    y=x;
+    while (f>>x){
+        if(x==y) nr++;
+        else {
+            cout<<y<<" "<<nr<<" ";
+            nr=1;
+        }
+        y=x;
+    }
+    cout<<x<<" "<<nr;
+ }
+
+
+
+
