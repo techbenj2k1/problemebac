@@ -19,7 +19,7 @@ void patrate(int x, int y){
     bool ok=0;
     for( i=1; i*i<=y; ++i){
             //cout<<i<<"\n";
-           if(i*i==x) {ok=1;}
+           if(i*i>=x) {ok=1;}
              c=(i+1)*(i+1)-y;
         if(c==0) ok=1;
         if( c>0 and c<=(2*i+1)) break;
